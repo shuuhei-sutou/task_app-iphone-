@@ -106,7 +106,6 @@
 				CEA13974204F8723003EBD01 /* Frameworks */,
 				CEA13975204F8723003EBD01 /* Resources */,
 				70C9560779861770FFBF9F42 /* [CP] Embed Pods Frameworks */,
-				8F79289F441538CA7B4CA254 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -201,21 +200,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-taskapp/Pods-taskapp-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8F79289F441538CA7B4CA254 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-taskapp/Pods-taskapp-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

@@ -27,7 +27,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.delegate = self
         tableView.dataSource = self
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -84,7 +84,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             
             try! realm.write {
                 self.realm.delete(task)
-                    tableView.deleteRows(at:[indexPath], with: .fade)
+                tableView.deleteRows(at:[indexPath], with: .fade)
             }
             
             center.getPendingNotificationRequests{ (requests: [UNNotificationRequest]) in
@@ -99,7 +99,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let inputViewController:InputViewController = segue.destination as! InputViewController
         
-        if segue.identifier == "cellSeque"{
+        if segue.identifier == "cellSegue"{
             let indexPath = self.tableView.indexPathForSelectedRow
             inputViewController.task = taskArray[indexPath!.row]
         }else{
@@ -111,8 +111,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 task.id = taskArray.max(ofProperty: "id")! + 1
             }
             inputViewController.task = task
-            }
         }
+    }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tableView.reloadData()
